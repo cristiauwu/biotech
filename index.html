@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biotecnología — La Ciencia que Redefine la Vida</title>
+  <meta name="description" content="Explora los fundamentos de la biotecnología: fermentación, bioprocesos, biorreactores, cultivos celulares y los productos biotecnológicos que transformaron el mundo.">
+  <meta property="og:title" content="Biotecnología — La Ciencia que Redefine la Vida">
+  <meta property="og:description" content="Descubre cómo la biotecnología utiliza organismos vivos para desarrollar productos que mejoran nuestra vida y el medio ambiente.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Lenis Smooth Scroll CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js" defer></script>
+
+  <!-- Vanilla Tilt (3D card effect) -->
+  <script src="https://unpkg.com/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js" defer></script>
+</head>
+<body>
+
+  <!-- Background Canvas for DNA Helix -->
+  <canvas id="dna-canvas" aria-hidden="true"></canvas>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ═══════════════════ NAVIGATION ═══════════════════ -->
+  <nav id="main-nav" class="nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" id="nav-logo">
+        <span class="nav-logo-icon"><i data-lucide="dna" class="lucide-icon"></i></span>
+        <span class="nav-logo-text">BioTech</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#que-es" class="nav-link" data-section="que-es">¿Qué es?</a></li>
+        <li><a href="#conceptos" class="nav-link" data-section="conceptos">Conceptos</a></li>
+        <li><a href="#productos" class="nav-link" data-section="productos">Productos</a></li>
+        <li><a href="#referencias" class="nav-link" data-section="referencias">Referencias</a></li>
+      </ul>
+      <button class="nav-mobile-toggle" id="nav-mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════════════ HERO ═══════════════════ -->
+    <section id="hero" class="hero">
+      <div class="hero-glow hero-glow--1" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--2" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--3" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="hero-tag" id="hero-tag">Ciencia · Innovación · Vida</p>
+        <h1 class="hero-title" id="hero-title">
+          <span class="hero-title-line">Biotecnología</span>
+          <span class="hero-title-line hero-title-line--accent">La Ciencia que</span>
+          <span class="hero-title-line hero-title-line--accent">Redefine la Vida</span>
+        </h1>
+        <p class="hero-subtitle" id="hero-subtitle"></p>
+
+        <div class="hero-metrics" id="hero-metrics">
+          <div class="hero-metric" id="metric-1">
+            <span class="hero-metric-value" data-target="1982">0</span>
+            <span class="hero-metric-label">Primera Insulina<br>Recombinante</span>
+          </div>
+          <div class="hero-metric-divider" aria-hidden="true"></div>
+          <div class="hero-metric" id="metric-2">
+            <span class="hero-metric-value" data-target="5">0</span>
+            <span class="hero-metric-label">Pilares<br>Fundamentales</span>
+          </div>
+          <div class="hero-metric-divider" aria-hidden="true"></div>
+          <div class="hero-metric" id="metric-3">
+            <span class="hero-metric-value" data-target="100" data-suffix="%">0</span>
+            <span class="hero-metric-label">Síntesis Microbiana<br>Controlada</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator" id="hero-scroll" aria-hidden="true">
+        <span class="hero-scroll-text">Desplázate para explorar</span>
+        <div class="hero-scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ ¿QUÉ ES LA BIOTECNOLOGÍA? ═══════════════════ -->
+    <section id="que-es" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-number" aria-hidden="true">01</span>
+          <h2 class="section-title" id="quees-title">¿Qué es la Biotecnología?</h2>
+          <div class="section-accent-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="intro-block" id="intro-block">
+          <div class="intro-text">
+            <p class="intro-lead">La biotecnología utiliza <strong>organismos o células vivas</strong> para desarrollar o modificar productos con fines específicos, como los alimentos transgénicos.</p>
+            <p>Está relacionada con la ingeniería genética y tiene aplicaciones en áreas como la <em>alimentación, medicina, industria, medio ambiente y agricultura</em>. Además, contribuye al desarrollo de productos más seguros y eficientes, así como a la reducción del impacto ambiental y al desarrollo sostenible.</p>
+          </div>
+          <div class="intro-visual" aria-hidden="true" data-aos="fade-left">
+            <div class="modern-img-wrapper img-circular">
+              <img src="assets/intro_dna.jpeg" alt="ADN Bioluminiscente" class="modern-img">
+            </div>
+          </div>
+        </div>
+
+        <h3 class="subsection-title" id="beneficios-title">Beneficios de la Biotecnología</h3>
+        <div class="benefits-grid" id="benefits-grid">
+          <div class="benefit-card" id="benefit-1">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="var(--bio-emerald)" stroke-width="1.5" opacity="0.3"/><path d="M16 28 Q24 12 32 28" stroke="var(--bio-emerald)" stroke-width="2" fill="none"/><path d="M12 32 L36 32" stroke="var(--bio-cyan)" stroke-width="1" opacity="0.5"/><circle cx="24" cy="20" r="3" fill="var(--bio-emerald)" opacity="0.6"/></svg>
+            </div>
+            <h4 class="benefit-title">Reducción del Impacto Ambiental</h4>
+            <p class="benefit-text">Disminuye las emisiones de CO₂, el consumo de agua y la generación de residuos en la industria alimentaria.</p>
+          </div>
+          <div class="benefit-card" id="benefit-2">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M24 8 C24 8 12 16 12 26 C12 33 17 38 24 40 C31 38 36 33 36 26 C36 16 24 8 24 8Z" stroke="var(--bio-emerald)" stroke-width="1.5" fill="none"/><path d="M24 18 L24 32 M18 25 L30 25" stroke="var(--bio-cyan)" stroke-width="1.5"/></svg>
+            </div>
+            <h4 class="benefit-title">Agricultura Sostenible</h4>
+            <p class="benefit-text">Favorece alimentos más nutritivos con menor utilización de pesticidas y productos químicos.</p>
+          </div>
+          <div class="benefit-card" id="benefit-3">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 48 48" fill="none"><rect x="10" y="14" width="28" height="20" rx="4" stroke="var(--bio-emerald)" stroke-width="1.5" fill="none"/><circle cx="24" cy="24" r="6" stroke="var(--bio-cyan)" stroke-width="1.5" fill="none"/><path d="M24 18 L24 30 M18 24 L30 24" stroke="var(--bio-amber)" stroke-width="1" opacity="0.6"/></svg>
+            </div>
+            <h4 class="benefit-title">Productos Seguros</h4>
+            <p class="benefit-text">Contribuye al desarrollo de productos más seguros, eficientes y con alto grado de pureza bajo condiciones controladas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DNA Strand Divider -->
+    <div class="section-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none" class="divider-svg">
+        <path d="M0 30 Q150 0 300 30 Q450 60 600 30 Q750 0 900 30 Q1050 60 1200 30" stroke="var(--bio-emerald)" stroke-width="1" fill="none" opacity="0.3" class="divider-wave"/>
+        <path d="M0 30 Q150 60 300 30 Q450 0 600 30 Q750 60 900 30 Q1050 0 1200 30" stroke="var(--bio-cyan)" stroke-width="1" fill="none" opacity="0.2" class="divider-wave"/>
+      </svg>
+    </div>
+
+    <!-- ═══════════════════ CONCEPTOS FUNDAMENTALES ═══════════════════ -->
+    <section id="conceptos" class="section section--dark">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-number" aria-hidden="true">02</span>
+          <h2 class="section-title" id="conceptos-title">Conceptos Fundamentales</h2>
+          <div class="section-accent-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="concepts-grid" id="concepts-grid">
+
+          <!-- Fermentación -->
+          <article class="concept-card concept-card--wide" id="concept-fermentacion">
+            <div class="concept-card-glow" aria-hidden="true"></div>
+            <div class="concept-header">
+              <div class="concept-icon concept-icon--amber">
+                <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="28" r="10" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M15 18 L15 8 L25 8 L25 18" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="17" cy="26" r="2" fill="currentColor" opacity="0.4"/><circle cx="23" cy="30" r="1.5" fill="currentColor" opacity="0.3"/><circle cx="20" cy="24" r="1" fill="currentColor" opacity="0.5"/></svg>
+              </div>
+              <span class="concept-tag">Proceso Metabólico</span>
+            </div>
+            <h3 class="concept-title">¿Qué es la Fermentación?</h3>
+            <p class="concept-text">La fermentación es un proceso metabólico que ocurre <strong>sin oxígeno</strong>, en el cual moléculas complejas, como la glucosa, se transforman en sustancias más sencillas y se obtiene energía.</p>
+            <p class="concept-text">Durante este proceso se produce piruvato y, dependiendo del microorganismo y del sustrato utilizado, se pueden obtener diferentes productos, como <em>ácido láctico, alcohol o ácido acético</em>.</p>
+            <div class="concept-pathway" aria-hidden="true">
+              <span class="pathway-node">Glucosa</span>
+              <span class="pathway-arrow">→</span>
+              <span class="pathway-node">Piruvato</span>
+              <span class="pathway-arrow">→</span>
+              <span class="pathway-node pathway-node--highlight">Ácido Láctico / Etanol</span>
+            </div>
+          </article>
+
+          <!-- Bioprocesos -->
+          <article class="concept-card" id="concept-bioprocesos">
+            <div class="concept-card-glow" aria-hidden="true"></div>
+            <div class="concept-header">
+              <div class="concept-icon concept-icon--emerald">
+                <svg viewBox="0 0 40 40" fill="none"><rect x="8" y="12" width="24" height="20" rx="3" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M14 12 L14 8 M26 12 L26 8" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="22" r="5" stroke="currentColor" stroke-width="1" fill="none" opacity="0.5"/><path d="M20 17 L20 27 M15 22 L25 22" stroke="currentColor" stroke-width="1" opacity="0.4"/></svg>
+              </div>
+              <span class="concept-tag">Producción Industrial</span>
+            </div>
+            <h3 class="concept-title">¿Qué son los Bioprocesos?</h3>
+            <p class="concept-text">Son métodos que utilizan <strong>células vivas o sus componentes</strong>, como enzimas, para obtener productos de interés industrial o para beneficio humano.</p>
+            <p class="concept-text">Permiten producir alimentos, medicamentos y otros productos bajo condiciones controladas, mejorando su calidad y eficiencia. También pueden emplear organismos modificados genéticamente para obtener sustancias como <em>insulina, enzimas y proteínas</em>.</p>
+          </article>
+
+          <!-- Biorreactores -->
+          <article class="concept-card" id="concept-biorreactores">
+            <div class="concept-card-glow" aria-hidden="true"></div>
+            <div class="concept-header">
+              <div class="concept-icon concept-icon--cyan">
+                <svg viewBox="0 0 40 40" fill="none"><ellipse cx="20" cy="10" rx="10" ry="4" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 10 L10 30 Q10 34 20 34 Q30 34 30 30 L30 10" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 20 Q20 24 30 20" stroke="currentColor" stroke-width="1" opacity="0.4"/><circle cx="16" cy="26" r="1.5" fill="currentColor" opacity="0.3"/><circle cx="24" cy="24" r="1" fill="currentColor" opacity="0.4"/><circle cx="20" cy="28" r="1.5" fill="currentColor" opacity="0.3"/></svg>
+              </div>
+              <span class="concept-tag">Ingeniería</span>
+            </div>
+            <h3 class="concept-title">¿Qué son los Biorreactores?</h3>
+            <div class="modern-img-wrapper">
+              <img src="assets/concept_bioreactor.png" alt="Biorreactor de alta tecnología" class="modern-img">
+            </div>
+            <p class="concept-text">Son recipientes diseñados para cultivar células o microorganismos bajo <strong>condiciones controladas</strong>.</p>
+            <p class="concept-text">Permiten regular factores como la <em>temperatura, pH, aireación, mezcla y oxígeno</em>, logrando cultivos más uniformes y facilitando la producción a mayor escala.</p>
+            <div class="bioreactor-params" aria-hidden="true">
+              <span class="param-badge"><span class="param-label">TEMP</span> 37°C</span>
+              <span class="param-badge"><span class="param-label">pH</span> 6.8</span>
+              <span class="param-badge"><span class="param-label">O₂</span> 95%</span>
+              <span class="param-badge"><span class="param-label">RPM</span> 250</span>
+            </div>
+          </article>
+
+          <!-- Cultivos Celulares -->
+          <article class="concept-card concept-card--wide" id="concept-cultivos">
+            <div class="concept-card-glow" aria-hidden="true"></div>
+            <div class="concept-header">
+              <div class="concept-icon concept-icon--pink">
+                <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="20" cy="18" r="5" stroke="currentColor" stroke-width="1" fill="none" opacity="0.5"/><circle cx="20" cy="18" r="2" fill="currentColor" opacity="0.3"/><path d="M14 26 Q20 22 26 26" stroke="currentColor" stroke-width="1" opacity="0.3"/></svg>
+              </div>
+              <span class="concept-tag">In Vitro</span>
+            </div>
+            <h3 class="concept-title">¿Qué son los Cultivos Celulares?</h3>
+            <div class="modern-img-wrapper img-wide">
+              <img src="assets/concept_cells.png" alt="Cultivos Celulares in vitro" class="modern-img">
+            </div>
+            <p class="concept-text">Son modelos de estudio realizados <strong>in vitro</strong>, donde las células se mantienen o reproducen bajo condiciones controladas en el laboratorio. Estas células pueden obtenerse de tejidos, órganos o fluidos como la sangre. El objetivo es conservar sus características fisiológicas, bioquímicas y genéticas para estudiar su comportamiento de manera similar a como ocurre en condiciones naturales.</p>
+
+            <div class="culture-types" id="culture-types">
+              <div class="culture-type">
+                <h4 class="culture-type-title">Cultivo de Órganos</h4>
+                <p class="culture-type-text">Mantiene la estructura y organización del órgano en condiciones controladas, permitiendo estudiar sus relaciones internas. Sin embargo, tiene un crecimiento limitado y no puede propagarse.</p>
+              </div>
+              <div class="culture-type">
+                <h4 class="culture-type-title">Explante Primario</h4>
+                <p class="culture-type-text">Utiliza un fragmento de tejido u órgano que se coloca sobre una superficie, donde las células pueden adherirse y crecer. No requiere un crecimiento previo in vitro.</p>
+              </div>
+              <div class="culture-type">
+                <h4 class="culture-type-title">Cultivo de Células</h4>
+                <p class="culture-type-text">Emplea células separadas de un organismo o de un explante. Aunque se pierden algunas interacciones entre ellas, pueden reproducirse fácilmente y permiten estudiar células de un mismo tipo.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cultivo de Tejidos Vegetales -->
+          <article class="concept-card" id="concept-vegetales">
+            <div class="concept-card-glow" aria-hidden="true"></div>
+            <div class="concept-header">
+              <div class="concept-icon concept-icon--emerald">
+                <svg viewBox="0 0 40 40" fill="none"><path d="M20 34 L20 18" stroke="currentColor" stroke-width="1.5"/><path d="M20 18 Q10 10 20 4 Q30 10 20 18Z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M20 24 Q12 20 8 24" stroke="currentColor" stroke-width="1" opacity="0.5"/><path d="M20 28 Q28 24 32 28" stroke="currentColor" stroke-width="1" opacity="0.5"/></svg>
+              </div>
+              <span class="concept-tag">Agricultura</span>
+            </div>
+            <h3 class="concept-title">Cultivo de Tejidos Vegetales</h3>
+            <p class="concept-text">Técnica de biotecnología que permite cultivar <strong>células, tejidos u órganos de una planta</strong> fuera de ella, en un medio nutritivo y bajo condiciones controladas de luz, temperatura y esterilidad.</p>
+            <p class="concept-text">Se utiliza para <em>multiplicar plantas rápidamente</em>, regenerarlas y obtener plantas sanas, siendo una herramienta importante en la agricultura y la investigación biotecnológica.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DNA Strand Divider -->
+    <div class="section-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none" class="divider-svg">
+        <path d="M0 30 Q150 0 300 30 Q450 60 600 30 Q750 0 900 30 Q1050 60 1200 30" stroke="var(--bio-cyan)" stroke-width="1" fill="none" opacity="0.2" class="divider-wave"/>
+        <path d="M0 30 Q150 60 300 30 Q450 0 600 30 Q750 60 900 30 Q1050 0 1200 30" stroke="var(--bio-emerald)" stroke-width="1" fill="none" opacity="0.3" class="divider-wave"/>
+      </svg>
+    </div>
+
+    <!-- ═══════════════════ PRODUCTOS BIOTECNOLÓGICOS ═══════════════════ -->
+    <section id="productos" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-number" aria-hidden="true">03</span>
+          <h2 class="section-title" id="productos-title">Productos Biotecnológicos</h2>
+          <div class="section-accent-line" aria-hidden="true"></div>
+          <p class="section-subtitle">Cinco aplicaciones que transformaron la industria, la medicina y la agricultura.</p>
+        </div>
+
+        <div class="products-timeline" id="products-timeline">
+
+          <!-- 1. Insulina Recombinante -->
+          <article class="product-card product-card--left" id="product-insulina">
+            <div class="product-card-inner">
+              <div class="product-card-glow" aria-hidden="true"></div>
+              <div class="product-number" aria-hidden="true">01</div>
+              <div class="product-badge product-badge--purple">Medicina</div>
+              <h3 class="product-title">Insulina Humana Recombinante</h3>
+              <div class="product-year">
+                <span class="product-year-value">1982</span>
+                <span class="product-year-label">FDA aprueba Humulin</span>
+              </div>
+              <p class="product-text">La insulina humana recombinante es uno de los ejemplos más importantes de la aplicación de la biotecnología en la medicina. Antes de utilizar técnicas de ADN recombinante, la insulina se obtenía principalmente de los páncreas de animales como cerdos y bovinos.</p>
+
+              <div class="product-detail" id="detail-insulina">
+                <div class="product-detail-section">
+                  <h4 class="product-detail-title">¿Cómo se obtiene?</h4>
+                  <p>Mediante la tecnología de ADN recombinante, se introduce la información genética necesaria para producir insulina humana en microorganismos, como bacterias. Estos se cultivan en condiciones controladas para que produzcan la proteína. Después, la insulina se recupera, purifica y procesa hasta obtener un producto adecuado para uso médico. En 1982, la FDA aprobó Humulin, la primera insulina humana biosintética obtenida mediante tecnología de ADN recombinante.</p>
+                </div>
+                <div class="product-detail-section">
+                  <h4 class="product-detail-title">Cualidades del producto</h4>
+                  <p>Permite producir grandes cantidades de una proteína prácticamente idéntica a la insulina humana, con un alto grado de pureza y bajo condiciones controladas. Su desarrollo también permitió disminuir la dependencia de fuentes animales.</p>
+                </div>
+              </div>
+
+              <button class="product-toggle" data-target="detail-insulina" aria-expanded="false">
+                <span class="product-toggle-text">Leer más</span>
+                <svg class="product-toggle-icon" viewBox="0 0 24 24" fill="none"><path d="M12 5 L12 19 M5 12 L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+            </div>
+            <div class="product-timeline-dot" aria-hidden="true"></div>
+          </article>
+
+          <!-- 2. Maíz Bt -->
+          <article class="product-card product-card--right" id="product-maiz">
+            <div class="product-card-inner">
+              <div class="product-card-glow" aria-hidden="true"></div>
+              <div class="product-number" aria-hidden="true">02</div>
+              <div class="product-badge product-badge--green">Agricultura</div>
+              <h3 class="product-title">Maíz Bt</h3>
+              <div class="product-organism">
+                <span class="organism-label">Organismo:</span>
+                <span class="organism-name">Bacillus thuringiensis</span>
+              </div>
+              <p class="product-text">Cultivo desarrollado mediante ingeniería genética para ofrecer protección contra determinadas plagas de insectos.</p>
+
+              <div class="product-detail" id="detail-maiz">
+                <div class="product-detail-section">
+                  <h4 class="product-detail-title">¿Cómo se obtiene?</h4>
+                  <p>Los científicos incorporan al maíz un gen de Bacillus thuringiensis. Este gen contiene la información necesaria para que la planta produzca una proteína que afecta a determinados insectos cuando se alimentan de ella. La característica de resistencia queda incorporada y puede transmitirse a las siguientes generaciones.</p>
+                </div>
+                <div class="product-detail-section">
+                  <h4 class="product-detail-title">Cualidades del producto</h4>
+                  <p>Proporciona protección frente a ciertas plagas y puede contribuir a disminuir el uso de algunos insecticidas. Ayuda a proteger el rendimiento del cultivo frente a daños ocasionados por insectos. La biotecnología agrícola utiliza este tipo de modificaciones para incorporar características específicas a los cultivos.</p>
+                </div>
+              </div>
+
+              <button class="product-toggle" data-target="detail-maiz" aria-expanded="false">
+                <span class="product-toggle-text">Leer más</span>
+                <svg class="product-toggle-icon" viewBox="0 0 24 24" fill="none"><path d="M12 5 L12 19 M5 12 L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+            </div>
+            <div class="product-timeline-dot" aria-hidden="true"></div>
+          </article>
+
+          <!-- 3. Papaya Resistente -->
+          <article class="product-card product-card--left" id="product-papaya">
+            <div class="product-card-inner">
+              <div class="product-card-glow" aria-hidden="true"></div>
+              <div class="product-number" aria-hidden="true">03</div>
+              <div class="product-badge product-badge--green">Agricultura</div>
+              <h3 class="product-title">Papaya Resistente al PRSV</h3>
+              <div class="product-organism">
+                <span class="organism-label">Virus:</span>
+                <span class="organism-name">Virus de la mancha anular</span>
+              </div>
+              <p class="product-text">La papaya resistente al virus de la mancha anular es otro ejemplo de la aplicación de la ingeniería genética en la agricultura. Este producto surgió como respuesta a una enfermedad viral que representó una amenaza importante para la producción de papaya.</p>
+
+              <div class="product-detail" id="detail-papaya">
+                <div class="product-detail-section">
+                  <h4 class="product-detail-title">¿Cómo se obtiene?</h4>
+                  <p>Mediante ingeniería genética se introdujo en la planta información genética relacionada con el virus de la mancha anular. Esta modificación permite que la planta pueda defenderse del virus y desarrollar resistencia.</p>
+                </div>
+                <div class="product-detail-section">
+                  <h4 class="product-detail-title">Cualidades del producto</h4>
+                  <p>La principal característica es su resistencia al virus de la mancha anular, lo que permite proteger los cultivos y mantener la producción en zonas donde la enfermedad representa un problema. Este ejemplo demuestra que la biotecnología puede utilizarse no solamente para modificar características nutricionales, sino también para ayudar a las plantas a enfrentar enfermedades.</p>
+                </div>
+              </div>
+
+              <button class="product-toggle" data-target="detail-papaya" aria-expanded="false">
+                <span class="product-toggle-text">Leer más</span>
+                <svg class="product-toggle-icon" viewBox="0 0 24 24" fill="none"><path d="M12 5 L12 19 M5 12 L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+            </div>
+            <div class="product-timeline-dot" aria-hidden="true"></div>
+          </article>
+
+          <!-- 4. Quimosina -->
+          <article class="product-card product-card--right" id="product-quimosina">
+            <div class="product-card-inner">
+              <div class="product-card-glow" aria-hidden="true"></div>
+              <div class="product-number" aria-hidden="true">04</div>
+              <div class="product-badge product-badge--amber">Industria Láctea</div>
+              <h3 class="product-title">Quimosina para Queso</h3>
+              <div class="product-organism">
+                <span class="organism-label">Microorganismo:</span>
+                <span class="organism-name">Aspergillus niger</span>
+              </div>
+              <p class="product-text">Enzima utilizada en la industria láctea para producir queso. Su función principal es ayudar a coagular la leche y formar la cuajada.</p>
+
+              <div class="product-detail" id="detail-quimosina">
+                <div class="product-detail-section">
+                  <h4 class="product-detail-title">¿Cómo se obtiene?</h4>
+                  <p>Actualmente pueden utilizarse microorganismos para producir quimosina mediante procesos de fermentación. Por ejemplo, la FDA registra preparaciones de quimosina producidas utilizando Aspergillus niger. El microorganismo se cultiva bajo condiciones controladas para obtener la enzima, que posteriormente se recupera y purifica. La FDA reconoce preparaciones de quimosina producidas mediante diferentes microorganismos para su utilización en la elaboración de quesos y otros productos lácteos.</p>
+                </div>
+                <div class="product-detail-section">
+                  <h4 class="product-detail-title">Cualidades del producto</h4>
+                  <p>Facilita la coagulación de la leche y permite obtener la textura característica de muchos quesos. El uso de enzimas producidas mediante microorganismos permite contar con una fuente controlada de esta sustancia para la industria alimentaria.</p>
+                </div>
+              </div>
+
+              <button class="product-toggle" data-target="detail-quimosina" aria-expanded="false">
+                <span class="product-toggle-text">Leer más</span>
+                <svg class="product-toggle-icon" viewBox="0 0 24 24" fill="none"><path d="M12 5 L12 19 M5 12 L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+            </div>
+            <div class="product-timeline-dot" aria-hidden="true"></div>
+          </article>
+
+          <!-- 5. Lactasa -->
+          <article class="product-card product-card--left" id="product-lactasa">
+            <div class="product-card-inner">
+              <div class="product-card-glow" aria-hidden="true"></div>
+              <div class="product-number" aria-hidden="true">05</div>
+              <div class="product-badge product-badge--cyan">Alimentaria</div>
+              <h3 class="product-title">Lactasa para Productos Sin Lactosa</h3>
+              <div class="product-organism">
+                <span class="organism-label">Microorganismo:</span>
+                <span class="organism-name">Kluyveromyces lactis</span>
+              </div>
+              <p class="product-text">Enzima utilizada para elaborar leche y otros productos lácteos con menor cantidad de lactosa. Es un ejemplo de cómo la biotecnología puede utilizar microorganismos para obtener enzimas destinadas a la industria alimentaria.</p>
+
+              <div class="product-detail" id="detail-lactasa">
+                <div class="product-detail-section">
+                  <h4 class="product-detail-title">¿Cómo se obtiene?</h4>
+                  <p>La lactasa puede producirse mediante microorganismos, como Kluyveromyces lactis. Estos microorganismos se cultivan bajo condiciones controladas para obtener la enzima. Posteriormente, la lactasa se incorpora al proceso de elaboración de productos lácteos. La enzima rompe la lactosa, que es el azúcar característico de la leche, en azúcares más simples: glucosa y galactosa.</p>
+                </div>
+                <div class="product-detail-section">
+                  <h4 class="product-detail-title">Cualidades del producto</h4>
+                  <p>La utilización de lactasa permite elaborar productos con menor cantidad de lactosa y facilita su consumo para personas que tienen dificultad para digerir este azúcar. La FDA incluye preparaciones de lactasa de origen microbiano entre las enzimas utilizadas en alimentos.</p>
+                </div>
+                <div class="product-pathway" aria-hidden="true">
+                  <span class="pathway-node">Lactosa</span>
+                  <span class="pathway-arrow">→</span>
+                  <span class="pathway-node pathway-node--highlight">Glucosa + Galactosa</span>
+                </div>
+              </div>
+
+              <button class="product-toggle" data-target="detail-lactasa" aria-expanded="false">
+                <span class="product-toggle-text">Leer más</span>
+                <svg class="product-toggle-icon" viewBox="0 0 24 24" fill="none"><path d="M12 5 L12 19 M5 12 L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+            </div>
+            <div class="product-timeline-dot" aria-hidden="true"></div>
+          </article>
+
+          <!-- Timeline Line -->
+          <div class="timeline-line" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ REFERENCIAS ═══════════════════ -->
+    <section id="referencias" class="section section--dark">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-number" aria-hidden="true">04</span>
+          <h2 class="section-title" id="referencias-title">Referencias</h2>
+          <div class="section-accent-line" aria-hidden="true"></div>
+        </div>
+
+        <ul class="references-list" id="references-list">
+          <li class="reference-item">
+            <span class="reference-bullet" aria-hidden="true"></span>
+            <p>Iberdrola. (s. f.). <em>¿Qué es la biotecnología?</em> <a href="https://www.iberdrola.com/conocenos/nuestro-modelo-innovacion/que-es-la-biotecnologia" target="_blank" rel="noopener">iberdrola.com</a></p>
+          </li>
+          <li class="reference-item">
+            <p>Concepto.de. (s. f.). <em>Fermentación.</em> <a href="https://concepto.de/fermentacion/" target="_blank" rel="noopener">concepto.de</a></p>
+          </li>
+          <li class="reference-item">
+            <p>Lifeder. (s. f.). <em>Bioprocesos.</em> <a href="https://www.lifeder.com/bioprocesos/" target="_blank" rel="noopener">lifeder.com</a></p>
+          </li>
+          <li class="reference-item">
+            <p>Tecnic. (s. f.). <em>¿Qué es un biorreactor?</em> <a href="https://www.tecnic.eu/es/que-es-un-biorreactor-todo-lo-que-necesitas-saber/" target="_blank" rel="noopener">tecnic.eu</a></p>
+          </li>
+          <li class="reference-item">
+            <p>Universidad Europea. (s. f.). <em>Cultivos celulares: qué son, tipos y aplicaciones.</em> <a href="https://universidadeuropea.com/blog/cultivos-celulares/" target="_blank" rel="noopener">universidadeuropea.com</a></p>
+          </li>
+          <li class="reference-item">
+            <p>Pérez Molphe Balch, E. (s. f.). <em>Cultivo de tejidos vegetales.</em> Universidad Autónoma de Aguascalientes. <a href="https://omp.uaa.mx/uaa/catalog/download/157/147/2621?inline=1" target="_blank" rel="noopener">omp.uaa.mx</a></p>
+          </li>
+          <li class="reference-item">
+            <p>U.S. Food and Drug Administration. (2024). <em>100 Years of Insulin.</em> <a href="https://www.fda.gov/about-fda/fda-history-exhibits/100-years-insulin" target="_blank" rel="noopener">fda.gov</a></p>
+          </li>
+          <li class="reference-item">
+            <p>U.S. Department of Agriculture (USDA). (2025). <em>Biotecnología agrícola.</em></p>
+          </li>
+          <li class="reference-item">
+            <p>Gonsalves, D. (2004). <em>Transgenic Papaya in Hawaii and Beyond.</em></p>
+          </li>
+          <li class="reference-item">
+            <p>U.S. Food and Drug Administration (FDA). (2025). <em>Preparaciones de quimosina para uso alimentario.</em></p>
+          </li>
+          <li class="reference-item">
+            <p>U.S. Food and Drug Administration (FDA). (2024). <em>Preparaciones de lactasa de origen microbiano.</em></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer id="footer" class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo"><i data-lucide="flask-round" class="lucide-icon"></i></span>
+        <p class="footer-tagline">Biotecnología — Ciencia al servicio de la vida</p>
+      </div>
+      <div class="footer-divider" aria-hidden="true"></div>
+      <p class="footer-copy">Proyecto educativo sobre biotecnología y sus aplicaciones.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+
+</body>
+</html>

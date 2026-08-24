@@ -1,0 +1,119 @@
+que es la biotecnologia
+La biotecnología utiliza organismos o células vivas para desarrollar o modificar productos con fines específicos, como los alimentos transgénicos. Está relacionada con la ingeniería genética y tiene aplicaciones en áreas como la alimentación, medicina, industria, medio ambiente y agricultura. Además, contribuye al desarrollo de productos más seguros y eficientes, así como a la reducción del impacto ambiental y al desarrollo sostenible (Iberdrola, s. f.).
+
+Beneficios de la biotecnología
+Entre sus principales beneficios en la industria alimentaria se encuentran:
+Reduce el impacto ambiental, disminuyendo las emisiones de CO₂, el consumo de agua y la generación de residuos.
+Favorece una agricultura más saludable y sostenible, mediante alimentos más nutritivos y una menor utilización de pesticidas y productos químicos.
+(Iberdrola, s. f.).
+
+¿Qué es la fermentación?
+La fermentación es un proceso metabólico que ocurre sin oxígeno, en el cual moléculas complejas, como la glucosa, se transforman en sustancias más sencillas y se obtiene energía. Durante este proceso se produce piruvato y, dependiendo del microorganismo y del sustrato utilizado, se pueden obtener diferentes productos, como ácido láctico, alcohol o ácido acético(Concepto.de, s. f.) .
+
+¿Qué son los bioprocesos?
+Los bioprocesos son métodos que utilizan células vivas o sus componentes, como enzimas, para obtener productos de interés industrial o para beneficio humano. Permiten producir alimentos, medicamentos y otros productos bajo condiciones controladas, mejorando su calidad y eficiencia. También pueden emplear organismos modificados genéticamente para obtener sustancias como insulina, enzimas y proteínas (Lifeder, s. f.) .
+
+¿Qué son los biorreactores?
+Los biorreactores son recipientes diseñados para cultivar células o microorganismos bajo condiciones controladas. Permiten regular factores como la temperatura, pH, aireación, mezcla y oxígeno, logrando cultivos más uniformes y facilitando la producción a mayor escala (Tecnic, s. f.).
+
+
+¿Qué son los cultivos celulares?
+Los cultivos celulares son modelos de estudio realizados in vitro, donde las células se mantienen o reproducen bajo condiciones controladas en el laboratorio. Estas células pueden obtenerse de tejidos, órganos o fluidos como la sangre. El objetivo es conservar sus características fisiológicas, bioquímicas y genéticas para estudiar su comportamiento de manera similar a como ocurre en condiciones naturales .
+(Universidad Europea, s. f.)
+Tipos de cultivos celulares
+Existen diferentes tipos de cultivos celulares según el material biológico utilizado y el procedimiento:
+Cultivo de órganos: mantiene la estructura y organización del órgano en condiciones controladas, permitiendo estudiar sus relaciones internas. Sin embargo, tiene un crecimiento limitado y no puede propagarse.
+Explante primario: utiliza un fragmento de tejido u órgano que se coloca sobre una superficie, donde las células pueden adherirse y crecer. No requiere un crecimiento previo in vitro.
+Cultivo de células: emplea células separadas de un organismo o de un explante. Aunque se pierden algunas interacciones entre ellas, pueden reproducirse fácilmente y permiten estudiar células de un mismo tipo.
+(Universidad Europea, s. f.)
+
+¿Qué son el cultivo de tejidos vegetales?
+El cultivo de tejidos vegetales es una técnica de biotecnología que permite cultivar células, tejidos u órganos de una planta fuera de ella, en un medio nutritivo y bajo condiciones controladas de luz, temperatura y esterilidad.
+Se utiliza para multiplicar plantas rápidamente, regenerarlas y obtener plantas sanas, siendo una herramienta importante en la agricultura y la investigación biotecnológica. (Pérez Molphe Balch s. f.).
+
+
+1. Insulina humana recombinante 
+
+La insulina humana recombinante es uno de los ejemplos más importantes de la aplicación de la biotecnología en la medicina. Antes de utilizar técnicas de ADN recombinante, la insulina se obtenía principalmente de los páncreas de animales como cerdos y bovinos.
+
+¿Cómo se obtiene?
+
+Mediante la tecnología de ADN recombinante, se introduce la información genética necesaria para producir insulina humana en microorganismos, como bacterias. Estos microorganismos se cultivan en condiciones controladas para que produzcan la proteína. Después, la insulina se recupera, purifica y procesa hasta obtener un producto adecuado para uso médico.
+
+En 1982, la FDA aprobó Humulin, la primera insulina humana biosintética obtenida mediante tecnología de ADN recombinante. (U.S. Food and Drug Administration⁠)
+
+Cualidades del producto
+
+La insulina recombinante permite producir grandes cantidades de una proteína prácticamente idéntica a la insulina humana, con un alto grado de pureza y bajo condiciones controladas. Su desarrollo también permitió disminuir la dependencia de fuentes animales. (U.S. Food and Drug Administration FDA, 2024).
+
+
+2. Maíz Bt 
+
+El maíz Bt es un cultivo desarrollado mediante ingeniería genética para ofrecer protección contra determinadas plagas de insectos. Su nombre proviene de la bacteria Bacillus thuringiensis.
+
+¿Cómo se obtiene?
+
+Los científicos incorporan al maíz un gen de Bacillus thuringiensis. Este gen contiene la información necesaria para que la planta produzca una proteína que afecta a determinados insectos cuando se alimentan de ella.
+
+De esta manera, la característica de resistencia queda incorporada a la planta y puede transmitirse a las siguientes generaciones.
+
+
+Cualidades del producto
+
+El maíz Bt proporciona protección frente a ciertas plagas y puede contribuir a disminuir el uso de algunos insecticidas. Además, ayuda a proteger el rendimiento del cultivo frente a daños ocasionados por insectos.
+
+La biotecnología agrícola utiliza este tipo de modificaciones para incorporar características específicas a los cultivos. (U.S. Department of Agriculture (USDA), 2025).
+
+
+3. Papaya resistente al virus de la mancha anular 
+
+La papaya resistente al virus de la mancha anular es otro ejemplo de la aplicación de la ingeniería genética en la agricultura. Este producto surgió como respuesta a una enfermedad viral que representó una amenaza importante para la producción de papaya.
+
+¿Cómo se obtiene?
+
+Mediante ingeniería genética se introdujo en la planta información genética relacionada con el virus de la mancha anular de la papaya. Esta modificación permite que la planta pueda defenderse del virus y desarrollar resistencia.
+
+Cualidades del producto
+
+La principal característica de estas variedades es su resistencia al virus de la mancha anular, lo que permite proteger los cultivos y mantener la producción de papaya en zonas donde la enfermedad representa un problema.
+
+Este ejemplo demuestra que la biotecnología puede utilizarse no solamente para modificar características nutricionales, sino también para ayudar a las plantas a enfrentar enfermedades. (Gonsalves, 2004).
+
+4. Quimosina para la elaboración de queso 
+
+La quimosina es una enzima utilizada en la industria láctea para producir queso. Su función principal es ayudar a coagular la leche y formar la cuajada.
+
+
+Cómo se obtiene?
+
+Actualmente pueden utilizarse microorganismos para producir quimosina mediante procesos de fermentación. Por ejemplo, la FDA registra preparaciones de quimosina producidas utilizando Aspergillus niger. El microorganismo se cultiva bajo condiciones controladas para obtener la enzima, que posteriormente se recupera y purifica.
+
+La FDA reconoce preparaciones de quimosina producidas mediante diferentes microorganismos para su utilización en la elaboración de quesos y otros productos lácteos. (U.S. Food and Drug Administration⁠)
+
+Cualidades del producto
+
+La quimosina facilita la coagulación de la leche y permite obtener la textura característica de muchos quesos. El uso de enzimas producidas mediante microorganismos permite contar con una fuente controlada de esta sustancia para la industria alimentaria. (U.S. Food and Drug Administration (FDA), 2025).
+
+5. Lactasa para productos sin lactosa 
+
+La lactasa es una enzima utilizada para elaborar leche y otros productos lácteos con menor cantidad de lactosa. Es un ejemplo de cómo la biotecnología puede utilizar microorganismos para obtener enzimas destinadas a la industria alimentaria.
+
+¿Cómo se obtiene?
+
+La lactasa puede producirse mediante microorganismos, como Kluyveromyces lactis. Estos microorganismos se cultivan bajo condiciones controladas para obtener la enzima. Posteriormente, la lactasa se incorpora al proceso de elaboración de productos lácteos.
+
+La enzima rompe la lactosa, que es el azúcar característico de la leche, en azúcares más simples: glucosa y galactosa.
+
+Cualidades del producto
+
+La utilización de lactasa permite elaborar productos con menor cantidad de lactosa y facilita su consumo para personas que tienen dificultad para digerir este azúcar. La FDA incluye preparaciones de lactasa de origen microbiano entre las enzimas utilizadas en alimentos. (U.S. Food and Drug Administration (FDA), 2024).
+
+
+Referencia:
+Iberdrola. (s. f.). ¿Qué es la biotecnología? https://www.iberdrola.com/conocenos/nuestro-modelo-innovacion/que-es-la-biotecnologia
+Concepto.de. (s. f.). Fermentación. https://concepto.de/fermentacion/
+Lifeder. (s. f.). Bioprocesos. https://www.lifeder.com/bioprocesos/
+Tecnic. (s. f.). ¿Qué es un biorreactor? Todo lo que necesitas saber. https://www.tecnic.eu/es/que-es-un-biorreactor-todo-lo-que-necesitas-saber/
+Universidad Europea. (s. f.). Cultivos celulares: qué son, tipos y aplicaciones. https://universidadeuropea.com/blog/cultivos-celulares/
+https://omp.uaa.mx/uaa/catalog/download/157/147/2621?inline=1
+https://www.fda.gov/about-fda/fda-history-exhibits/100-years-insulin
