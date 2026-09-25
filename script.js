@@ -666,7 +666,7 @@
     repo: 'cristiauwu/biotech',
     repoId: 'R_kgDOUC2KeA',
     category: 'General',
-    categoryId: ''
+    categoryId: 'DIC_kwDOUC2KeM4DGZAu'
   };
 
   function initCommentsEmbed() {
