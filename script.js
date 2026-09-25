@@ -19,6 +19,7 @@
   // ═══════════════════════════════════════════════════════════════
   function initDNACanvas() {
     try {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       const canvas = $('#dna-canvas');
       if (!canvas) return;
       const ctx = canvas.getContext('2d');
@@ -347,7 +348,7 @@
 
   // Fallback: show all content if GSAP fails
   function showAllContent() {
-    var hiddenElements = $$('[style*="opacity: 0"], .hero-title-line, .hero-tag, #hero-subtitle, #hero-metrics, .hero-scroll-indicator, .section-number, .section-title, .section-accent-line, .section-subtitle, .subsection-title, #intro-block, .benefit-card, .concept-card, .product-card, .reference-item');
+      var hiddenElements = $$('[style*="opacity: 0"], .hero-title-line, .hero-tag, #hero-subtitle, #hero-metrics, .hero-scroll-indicator, .section-number, .section-title, .section-accent-line, .section-subtitle, .subsection-title, #intro-block, .benefit-card, .concept-card, .product-card, .reference-item, .team-card, .blog-post');
     hiddenElements.forEach(function (el) {
       el.style.opacity = '1';
       el.style.transform = 'none';
@@ -501,6 +502,21 @@
         });
       }
 
+      // Close mobile menu with Escape and return focus to the toggle
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') return;
+        var links = $('#nav-links');
+        var toggle = $('#nav-mobile-toggle');
+        if (links && links.classList.contains('is-open')) {
+          links.classList.remove('is-open');
+          if (toggle) {
+            toggle.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.focus();
+          }
+        }
+      });
+
       // Hero logo scroll
       var heroLogo = $('#nav-logo');
       if (heroLogo) {
@@ -582,6 +598,7 @@
   // ═══════════════════════════════════════════════════════════════
   function initLenis() {
     try {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       if (typeof Lenis === 'undefined') return;
 
       var lenis = new Lenis({
@@ -633,6 +650,29 @@
   }
 
 
+  function initCommentsEmbed() {
+    try {
+      var threads = $$('.cusdis-thread');
+      if (!threads.length) return;
+
+      var configured = threads.some(function (thread) {
+        return thread.getAttribute('data-app-id') && thread.getAttribute('data-app-id') !== 'CONFIGURA_TU_APP_ID';
+      });
+      if (!configured) return;
+
+      if (!document.querySelector('script[data-cusdis-client]')) {
+        var script = document.createElement('script');
+        script.src = 'https://cusdis.com/js/cusdis.es.js';
+        script.defer = true;
+        script.setAttribute('data-cusdis-client', 'true');
+        document.body.appendChild(script);
+      }
+    } catch (err) {
+      console.warn('Comments embed init failed:', err);
+    }
+  }
+
+
   // ═══════════════════════════════════════════════════════════════
   // 10. INITIALIZATION
   // ═══════════════════════════════════════════════════════════════
@@ -640,6 +680,7 @@
     initDNACanvas();
     initNavigation();
     initCardInteractions();
+    initCommentsEmbed();
 
     // Wait for all deferred scripts to load
     var checkInterval = setInterval(function () {

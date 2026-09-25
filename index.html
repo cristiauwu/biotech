@@ -35,6 +35,8 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
   <!-- Background Canvas for DNA Helix -->
   <canvas id="dna-canvas" aria-hidden="true"></canvas>
 
@@ -52,6 +54,8 @@
         <li><a href="#que-es" class="nav-link" data-section="que-es">¿Qué es?</a></li>
         <li><a href="#conceptos" class="nav-link" data-section="conceptos">Conceptos</a></li>
         <li><a href="#productos" class="nav-link" data-section="productos">Productos</a></li>
+        <li><a href="#integrantes" class="nav-link" data-section="integrantes">Integrantes</a></li>
+        <li><a href="#blog" class="nav-link" data-section="blog">Blog</a></li>
         <li><a href="#referencias" class="nav-link" data-section="referencias">Referencias</a></li>
       </ul>
       <button class="nav-mobile-toggle" id="nav-mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
@@ -60,7 +64,7 @@
     </div>
   </nav>
 
-  <main>
+  <main id="main">
 
     <!-- ═══════════════════ HERO ═══════════════════ -->
     <section id="hero" class="hero">
@@ -475,11 +479,87 @@
       </div>
     </section>
 
+    <!-- ═══════════════════ INTEGRANTES ═══════════════════ -->
+    <section id="integrantes" class="section section--dark">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-number" aria-hidden="true">04</span>
+          <h2 class="section-title" id="integrantes-title">Integrantes</h2>
+          <div class="section-accent-line" aria-hidden="true"></div>
+          <p class="section-subtitle">El equipo detrás de esta exploración sobre biotecnología.</p>
+        </div>
+        <div class="team-grid" aria-labelledby="integrantes-title">
+          <article class="team-card">
+            <div class="team-avatar" aria-hidden="true">FP</div>
+            <h3 class="team-name">Fernando Paz</h3>
+          </article>
+          <article class="team-card">
+            <div class="team-avatar" aria-hidden="true">AA</div>
+            <h3 class="team-name">Annete Aguirre</h3>
+          </article>
+          <article class="team-card">
+            <div class="team-avatar" aria-hidden="true">LC</div>
+            <h3 class="team-name">Lesley Chavez</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ BLOG ═══════════════════ -->
+    <section id="blog" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-number" aria-hidden="true">05</span>
+          <h2 class="section-title" id="blog-title">Blog Biotech</h2>
+          <div class="section-accent-line" aria-hidden="true"></div>
+          <p class="section-subtitle">Ideas, procesos y conversaciones sobre la ciencia que transforma la vida.</p>
+        </div>
+
+        <div class="blog-grid" aria-labelledby="blog-title">
+          <article class="blog-post" id="post-fermentacion" data-post-slug="fermentacion">
+            <div class="post-meta"><span class="post-tag">Bioprocesos</span><time datetime="2026-09-25">25 septiembre 2026</time></div>
+            <h3 class="post-title">Fermentación: transformar lo invisible</h3>
+            <p class="post-excerpt">La fermentación conecta microorganismos, energía y alimentos. En el laboratorio, controlar el pH, la temperatura y el sustrato convierte un proceso natural en una herramienta precisa.</p>
+            <details class="post-details"><summary>Leer artículo</summary><p>Desde el ácido láctico hasta el etanol, distintos microorganismos producen moléculas útiles a partir de rutas metabólicas controladas. Esta capacidad permite diseñar procesos más eficientes y sostenibles para la industria alimentaria.</p></details>
+            <div class="comments-embed" data-comments-post="fermentacion">
+              <p class="comments-label">Comentarios compartidos</p>
+              <div class="cusdis-thread" data-host="https://cusdis.com" data-app-id="CONFIGURA_TU_APP_ID" data-page-id="fermentacion" data-page-url="" data-page-title="Fermentación: transformar lo invisible"></div>
+              <noscript>Activa JavaScript para cargar los comentarios compartidos.</noscript>
+            </div>
+          </article>
+
+          <article class="blog-post" id="post-insulina" data-post-slug="insulina-recombinante">
+            <div class="post-meta"><span class="post-tag">Medicina</span><time datetime="2026-09-25">25 septiembre 2026</time></div>
+            <h3 class="post-title">Insulina recombinante: precisión al servicio de la salud</h3>
+            <p class="post-excerpt">La tecnología de ADN recombinante permitió producir insulina humana en microorganismos bajo condiciones controladas.</p>
+            <details class="post-details"><summary>Leer artículo</summary><p>El proceso combina ingeniería genética, cultivo microbiano, recuperación y purificación. Es un ejemplo de cómo la biotecnología puede convertir conocimiento molecular en soluciones médicas a gran escala.</p></details>
+            <div class="comments-embed" data-comments-post="insulina-recombinante">
+              <p class="comments-label">Comentarios compartidos</p>
+              <div class="cusdis-thread" data-host="https://cusdis.com" data-app-id="CONFIGURA_TU_APP_ID" data-page-id="insulina-recombinante" data-page-url="" data-page-title="Insulina recombinante: precisión al servicio de la salud"></div>
+              <noscript>Activa JavaScript para cargar los comentarios compartidos.</noscript>
+            </div>
+          </article>
+
+          <article class="blog-post" id="post-cultivos" data-post-slug="cultivos-celulares">
+            <div class="post-meta"><span class="post-tag">Laboratorio</span><time datetime="2026-09-25">25 septiembre 2026</time></div>
+            <h3 class="post-title">Cultivos celulares: observar la vida en condiciones controladas</h3>
+            <p class="post-excerpt">Los cultivos celulares permiten estudiar el comportamiento de células fuera del organismo y comprender sus respuestas.</p>
+            <details class="post-details"><summary>Leer artículo</summary><p>La temperatura, el medio nutritivo, la esterilidad y el intercambio gaseoso son variables esenciales. Al controlar estas condiciones, el laboratorio se convierte en una ventana para investigar procesos fisiológicos y desarrollar aplicaciones.</p></details>
+            <div class="comments-embed" data-comments-post="cultivos-celulares">
+              <p class="comments-label">Comentarios compartidos</p>
+              <div class="cusdis-thread" data-host="https://cusdis.com" data-app-id="CONFIGURA_TU_APP_ID" data-page-id="cultivos-celulares" data-page-url="" data-page-title="Cultivos celulares: observar la vida en condiciones controladas"></div>
+              <noscript>Activa JavaScript para cargar los comentarios compartidos.</noscript>
+            </div>
+          </article>
+        </div>
+        <p class="comments-setup-note">Los comentarios se compartirán entre visitantes mediante Cusdis cuando se configure el App ID del proyecto.</p>
+      </div>
+    </section>
     <!-- ═══════════════════ REFERENCIAS ═══════════════════ -->
     <section id="referencias" class="section section--dark">
       <div class="section-container">
         <div class="section-header">
-          <span class="section-number" aria-hidden="true">04</span>
+          <span class="section-number" aria-hidden="true">06</span>
           <h2 class="section-title" id="referencias-title">Referencias</h2>
           <div class="section-accent-line" aria-hidden="true"></div>
         </div>
