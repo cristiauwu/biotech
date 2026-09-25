@@ -664,52 +664,47 @@
 
   var GISCUS_CONFIG = {
     repo: 'cristiauwu/biotech',
-    repoId: '',
+    repoId: 'R_kgDOUC2KeA',
     category: 'General',
     categoryId: ''
   };
 
   function initCommentsEmbed() {
     try {
-      var disclosures = $$('.comments-disclosure');
-      if (!disclosures.length) return;
+      var disclosure = $('.site-comments .comments-disclosure');
+      var mount = $('.giscus-site-thread', disclosure || document);
+      if (!disclosure || !mount) return;
 
-      disclosures.forEach(function (disclosure) {
-        var mount = $('.giscus-thread', disclosure);
-        if (!mount || mount.dataset.giscusMounted === 'true') return;
+      disclosure.addEventListener('toggle', function () {
+        if (!disclosure.open || mount.dataset.giscusMounted === 'true') return;
+        mount.dataset.giscusMounted = 'true';
 
-        disclosure.addEventListener('toggle', function () {
-          if (!disclosure.open || mount.dataset.giscusMounted === 'true') return;
-          mount.dataset.giscusMounted = 'true';
+        if (!GISCUS_CONFIG.repoId || !GISCUS_CONFIG.categoryId) {
+          var notice = document.createElement('p');
+          notice.className = 'comments-config-notice';
+          notice.textContent = 'Los comentarios estarán disponibles cuando se configure la categoría de GitHub Discussions.';
+          mount.appendChild(notice);
+          return;
+        }
 
-          if (!GISCUS_CONFIG.repoId || !GISCUS_CONFIG.categoryId) {
-            mount.textContent = '';
-            var notice = document.createElement('p');
-            notice.className = 'comments-config-notice';
-            notice.textContent = 'Los comentarios estarán disponibles cuando se configure GitHub Discussions. El sitio usará Giscus para compartir la conversación.';
-            mount.appendChild(notice);
-            return;
-          }
-
-          var script = document.createElement('script');
-          script.src = 'https://giscus.app/client.js';
-          script.async = true;
-          script.crossOrigin = 'anonymous';
-          script.setAttribute('data-repo', GISCUS_CONFIG.repo);
-          script.setAttribute('data-repo-id', GISCUS_CONFIG.repoId);
-          script.setAttribute('data-category', GISCUS_CONFIG.category);
-          script.setAttribute('data-category-id', GISCUS_CONFIG.categoryId);
-          script.setAttribute('data-mapping', 'specific');
-          script.setAttribute('data-term', mount.getAttribute('data-term') || 'biotech');
-          script.setAttribute('data-strict', '1');
-          script.setAttribute('data-reactions-enabled', '1');
-          script.setAttribute('data-emit-metadata', '0');
-          script.setAttribute('data-input-position', 'top');
-          script.setAttribute('data-theme', 'dark_dimmed');
-          script.setAttribute('data-lang', 'es');
-          script.setAttribute('data-loading', 'lazy');
-          mount.appendChild(script);
-        });
+        var script = document.createElement('script');
+        script.src = 'https://giscus.app/client.js';
+        script.async = true;
+        script.crossOrigin = 'anonymous';
+        script.setAttribute('data-repo', GISCUS_CONFIG.repo);
+        script.setAttribute('data-repo-id', GISCUS_CONFIG.repoId);
+        script.setAttribute('data-category', GISCUS_CONFIG.category);
+        script.setAttribute('data-category-id', GISCUS_CONFIG.categoryId);
+        script.setAttribute('data-mapping', 'specific');
+        script.setAttribute('data-term', mount.getAttribute('data-term') || 'sitio-biotech');
+        script.setAttribute('data-strict', '1');
+        script.setAttribute('data-reactions-enabled', '1');
+        script.setAttribute('data-emit-metadata', '0');
+        script.setAttribute('data-input-position', 'top');
+        script.setAttribute('data-theme', 'dark_dimmed');
+        script.setAttribute('data-lang', 'es');
+        script.setAttribute('data-loading', 'lazy');
+        mount.appendChild(script);
       });
     } catch (err) {
       console.warn('Comments embed init failed:', err);

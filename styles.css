@@ -1250,13 +1250,21 @@ em {
 .post-details p { margin-top: var(--space-md); }
 .comments-embed { margin-top: auto; padding-top: var(--space-xl); }
 .comments-label { margin-bottom: var(--space-sm); color: var(--text-primary); font-family: var(--font-mono); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .08em; }
-.giscus-thread {
-  min-height: 120px;
+.giscus-site-thread {
+  min-height: 160px;
   margin-top: var(--space-md);
   padding: var(--space-md);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   background: var(--bio-dark);
+}
+.site-comments {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: var(--space-2xl);
+  background: var(--bio-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
 }
 .comments-disclosure {
   margin-top: var(--space-md);
@@ -1276,7 +1284,8 @@ em {
   font-size: var(--text-sm);
   line-height: 1.6;
 }
-.comments-embed noscript { display: block; margin-top: var(--space-sm); color: var(--text-tertiary); font-size: var(--text-xs); }
+.comments-embed noscript,
+.site-comments noscript { display: block; margin-top: var(--space-sm); color: var(--text-tertiary); font-size: var(--text-xs); }
 .comments-setup-note { margin-top: var(--space-xl); color: var(--text-tertiary); font-size: var(--text-sm); text-align: center; }
 .skip-link { position: fixed; top: var(--space-md); left: var(--space-md); z-index: 100; padding: var(--space-sm) var(--space-md); color: var(--bio-dark); background: var(--bio-emerald); border-radius: var(--radius-sm); transform: translateY(-160%); transition: transform var(--duration-fast) var(--ease-out); }
 .skip-link:focus { transform: translateY(0); }
@@ -1294,19 +1303,11 @@ em {
   .blog-grid {
     grid-template-columns: 1fr;
   }
-  .concept-card--wide {
-    grid-column: span 1;
-  }
-  .culture-types {
-    grid-template-columns: 1fr;
-  }
-  .product-card {
-    width: 80%;
-  }
+  .concept-card--wide { grid-column: span 1; }
+  .culture-types { grid-template-columns: 1fr; }
+  .product-card { width: 80%; }
   .product-card--left .product-timeline-dot,
-  .product-card--right .product-timeline-dot {
-    display: none;
-  }
+  .product-card--right .product-timeline-dot { display: none; }
   .timeline-line { left: var(--space-xl); }
 }
 
