@@ -695,8 +695,8 @@
         script.setAttribute('data-repo-id', GISCUS_CONFIG.repoId);
         script.setAttribute('data-category', GISCUS_CONFIG.category);
         script.setAttribute('data-category-id', GISCUS_CONFIG.categoryId);
-        script.setAttribute('data-mapping', 'specific');
-        script.setAttribute('data-term', mount.getAttribute('data-term') || 'sitio-biotech');
+        script.setAttribute('data-mapping', 'number');
+        script.setAttribute('data-term', '2');
         script.setAttribute('data-strict', '1');
         script.setAttribute('data-reactions-enabled', '1');
         script.setAttribute('data-emit-metadata', '0');
