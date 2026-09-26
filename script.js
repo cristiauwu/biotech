@@ -665,7 +665,7 @@
   var GISCUS_CONFIG = {
     repo: 'cristiauwu/biotech',
     repoId: 'R_kgDOUC2KeA',
-    category: 'General',
+    category: 'Announcements',
     categoryId: 'DIC_kwDOUC2KeM4DGZAu'
   };
 
